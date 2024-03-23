@@ -191,7 +191,7 @@ Content:
 ```
 
 ## Post Theme
-Creates new Theme with the first caption of the author and returns the theme as json.
+Creates new Theme with the first caption of the author and returns the theme as json, only if user is authenticated.
 
 ### URL --> ```/themes```
 
@@ -233,7 +233,7 @@ Content:
 ```
 
 ## Create Post
-Creates new Post of the author and returns the theme as json.
+Creates new Post of the author and returns the theme as json, only if user is authenticated.
 
 ### URL --> ```/themes/:themeId```
 
