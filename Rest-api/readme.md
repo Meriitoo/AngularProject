@@ -201,9 +201,9 @@ Creates new Theme with the first caption of the author and returns the theme as 
 
 ```
 {
-    "themeName": "Some Caption Title",
-    "postText": "Some Post text",
-    "area": "Some Content text",
+    "themeName": "Summer 2024",
+    "postText": "Adventures await where the sand meets the sea",
+    "area": "Sunset our favourite",
 }
 ```
 
@@ -225,7 +225,7 @@ Content:
     "posts": ["5f86c38abfa44331a0ff0094"],
     "themeName": "Summer 2024",
     "userId": "5f86c1f0a112c130e89964af",
-    "area": "Adventures await where the sand meets the sea",
+    "area": "Sunset our favourite",
     "created_at": "2020-10-14T09:23:22.102Z",
     "updatedAt": "2020-10-14T09:23:22.114Z",
     "__v": 0
@@ -243,7 +243,7 @@ Creates new Post of the author and returns the theme as json, only if user is au
 
 ```
 {
-    "postText": "Some Post text"
+    "postText": "Adventures await where the sand meets the sea",
 }
 ```
 
@@ -260,9 +260,9 @@ Content:
     "5f85ad8f1141b13a04a9139c",
     "5f85b2501141b13a04a9139d"
 ],
-"themeName": "Some Theme",
+"themeName": "Summer 2024",
 "userId": "5f8580d25d1da62568dd38fd",
-"area": "Some content",
+"area": "Sunset our favourite",
 "created_at": "2020-10-13T11:21:54.863Z",
 "updatedAt": "2020-10-13T13:57:36.466Z",
 "__v": 0
