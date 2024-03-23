@@ -1,0 +1,39 @@
+<main>
+    <div *ngIf="isLoading">
+      <app-loader></app-loader>
+    </div>
+  
+    <div *ngIf="!isLoading" class="theme-title">
+      <div *ngFor="let theme of themes" class="theme-container">
+        <div class="theme-name-wrapper">
+          <div class="theme-name">
+            <a [routerLink]="theme._id" class="normal">
+              <h2 class="caption-title">Caption Title: {{theme.themeName | slice : 25}}</h2>
+            </a>
+            <div class="columns">
+              <div>
+                <p>Date: <time>{{theme.created_at}}</time></p>
+                <div class="nick-name">
+                  <p>Username: <span>{{theme.userId.username}}</span></p>
+                  <h3>Caption Content: <span>{{theme.area}}</span></h3>
+                </div>
+              </div>
+              <div class="subscribers">
+                <div *ngIf="!isSubscribed[theme._id]" class="like-button" (click)="subscribeToTheme(theme._id)" style="text-align: center;">
+                    <i class="far fa-heart"  style="font-size:36px;"  ></i>
+                    <span style="display: block;">Like</span>
+                </div>
+                <div *ngIf="isSubscribed[theme._id]" class="liked" style="text-align: center;">
+                    <span style="display: block;">You already liked!</span>
+                    <i class="fas fa-heart" style="font-size:48px;color:red"></i>
+                </div>
+            </div>            
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  
+
+  

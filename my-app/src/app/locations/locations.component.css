@@ -1,0 +1,49 @@
+.custom-btn-success,
+.custom-btn-danger,
+.blue-btn {
+    border-radius: 15px;
+}
+
+.custom-btn-success {
+    background-color: rgb(52, 209, 52);
+    color: white;
+    margin-right: 10px;
+}
+
+.custom-btn-danger {
+    background-color: rgb(212, 62, 62);
+    color: white;
+}
+
+.fr-pic {
+    width: 40%;
+    margin-top: 30px
+}
+
+img {
+    mask-border: radial-gradient(#000 69%, #0000 70%) 84.5%/50%;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+img {
+    mask:
+        radial-gradient(at 70% 31%, #000000 29%, #0000 30%),
+        radial-gradient(at 30% 31%, #000 29%, #0000 30%),
+        linear-gradient(#000 0 0) bottom/100% 50% no-repeat;
+    clip-path: polygon(-41% 0, 50% 91%, 141% 0);
+}
+
+.title {
+    color: #d323a2;
+}
+
+.table-title {
+    color: #d323a2;
+}
+
+.container {
+    margin-bottom: 100px;
+}
+
+
+@import "~bootstrap/dist/css/bootstrap.css";

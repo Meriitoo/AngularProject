@@ -1,0 +1,100 @@
+/* theme list item */
+
+.theme-container a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.theme-container span {
+    font-weight: bold;
+}
+
+.theme-container h2, p {
+    padding: 0.3em 0 0.2em;
+    margin: 0;
+}
+
+.theme-name-wrapper {
+    display: flex; 
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.3em 0.5em;
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    font-size: 0.8em;
+    margin-top: 2.5em;
+    background-color: pink;
+    width: 150%;
+    margin-left: -100px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+}
+
+.theme-title {
+    padding: 0;
+    width: 95%;
+    margin:  0 auto;
+}
+
+.theme-name {
+    width: 100%;
+}
+
+.columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0.7rem;
+}
+
+.subscribers {
+    text-align: right;
+    flex-basis: 25%;
+}
+
+.subscribers button {
+    padding: 0.2rem 0.5rem;
+    border: none;
+    border-radius: 0.3rem;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+}
+
+.subscribe {
+    background-color: green;
+}
+
+.unsubscribe {
+    background-color: red;
+}
+
+time {
+    font-weight: bold;
+}
+
+.welcome-component{
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 50px;
+}
+
+.caption-title{
+    color: #c61ea9;
+}
+
+@media screen and (max-width: 768px) {
+    .theme-name-wrapper {
+        width: 80%;
+        margin-left: 50px;
+        margin-right: 20px;
+    
+    }
+    
+    .theme-title {
+        width: 100%;
+    }
+    
+    .theme-name {
+        width: 100%;
+    }
+}

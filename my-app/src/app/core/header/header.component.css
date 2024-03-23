@@ -1,0 +1,87 @@
+/* header  */
+
+header {
+    background: rgb(0, 128, 182);
+    background: linear-gradient(0deg, rgb(217, 123, 241) 0%, rgb(181, 5, 234) 35%, rgb(249, 182, 14) 100%);
+}
+
+header ul {
+    padding: 0;
+    display: flex;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+header ul span {
+    color: white;
+    padding: 0.5em;
+}
+
+.mini-navbar ul {
+    border-radius: 0.3em;
+    padding-left: 0;
+    width: 100%;
+}
+
+
+header li {
+    list-style: none;
+    margin: .35em;
+    padding: 0 .95em;
+}
+
+header a:hover {
+    color: rgb(136, 5, 165); /* Change the color on hover */
+}
+
+
+
+header a {
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+}
+
+
+
+.logo {
+    font-size: 1.3em;
+    color: white;
+    padding-bottom: 0;
+}
+
+.logo-wrap {
+    font-family: "Times New Roman", Times, serif;
+    letter-spacing: .5em;
+    margin: 0.5em 0;
+}
+
+.mini-navbar-wrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+}
+
+
+/* mini-navbar */
+
+.mini-navbar  {
+    background-color: #d3249a;
+    border-radius: 5px;
+    box-shadow: inset 0 0 10px 
+    #ead56c;
+}
+
+.mini-navbar ul li+li {
+    border-left: 1px solid lightgrey;
+    padding-left: .5em;
+}
+
+.fas{
+    color: white;
+    margin-left: 10px;
+}

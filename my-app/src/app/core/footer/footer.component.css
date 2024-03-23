@@ -1,0 +1,41 @@
+footer {
+    background: rgb(181, 5, 234);
+    bottom: 0;
+    width: 100%;
+    max-width: 1800px;
+    padding: 5px 0;
+    color: white;
+    text-align: center;
+}
+
+.footer-content {
+    display: flex; 
+    justify-content: space-around;
+    flex-wrap: wrap; 
+}
+
+.office-address, .social-media {
+    flex: 1; 
+    min-width: 200px; 
+}
+
+footer p {
+    margin: 5px 0;
+    font-size: 0.8em;
+}
+
+.social-icons {
+    gap: 10px;
+    display: flex; 
+    justify-content: center; 
+}
+
+.social-icons .icon {
+    text-decoration: none; 
+    color: white; 
+    font-size: 1.5em; 
+}
+
+.social-icons .icon:hover {
+    color:  rgb(136, 5, 165);  
+}

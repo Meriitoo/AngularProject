@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="welcome">
+        <h3>Welcome!</h3>
+        <p>
+            Welcome to our Instagram Caption Sharing Community! 📸 Need the perfect caption for your latest Instagram
+            post? Look no further! Our platform is your go-to destination for discovering and sharing witty, engaging
+            captions that will make your photos stand out.
+        </p>
+
+        <h3>Create Friendships!</h3>
+        <p>
+            But that's not all – we're not just about captions. Here, we believe in the power of connection and
+            creativity. That's why we offer a unique opportunity for everyone to come together for photoshoot days.
+            Whether you're a seasoned photographer or just looking for a fun day out, our photoshoot events are open to
+            all. Capture memorable moments, share laughs, and make new friends while creating stunning photos for your
+            social media feed.
+        </p>
+        <h3>Share Inspiration!</h3>
+        <p>
+            Join our community today to discover endless inspiration, share your creativity, and connect with
+            like-minded individuals. Let's turn every photo into a story worth sharing!
+        </p>
+        <div class="logged">
+            <ul *ngIf="!isLogged">
+                <li class="login">
+                    <a routerLink="/auth/login">
+                        Login
+                    </a>
+                </li>
+                <li class="register">
+                    <a routerLink="/auth/register">
+                        Register
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

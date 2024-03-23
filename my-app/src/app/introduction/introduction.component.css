@@ -1,0 +1,81 @@
+/* welcome component */
+
+.welcome {
+    border: 1px solid #999;
+    border-radius: 0.3em;
+    font-size: 1.0em;
+    padding-bottom: 500px;
+    background-image: url('https://herospark.com/blog/wp-content/uploads/sites/6/2023/07/pkjlzul_bug.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+
+.welcome h3 {
+    color: white;
+    background-color: #d3249a;
+    border-radius: 0.3em;
+    width: 50%;
+    padding: 0.3em 1em;
+    margin-left: 47%;
+    margin-top: 5%;
+  text-align: center;
+  box-shadow: inset 0 0 10px 
+  #ead56c;
+}
+
+.welcome p {
+    padding: 1em;
+    border-bottom: 1px solid #999;
+    font-style: normal;
+    background-color: pink;
+    width: 50%;
+    margin-left: 47%;
+    border-radius: 0.3em;
+    box-shadow: inset 0 0 10px 
+    #ead56c;
+    
+}
+
+.welcome a {
+    color: white;
+    text-decoration: none;
+    background-color: #d3249a;
+    border: none;
+    border-radius: 0.3em;
+    padding: 0.5em 5.2em;
+    margin: 1em;
+    box-shadow: inset 0 0 10px 
+    #ead56c;
+}
+
+.welcome a:hover {
+    cursor: pointer;
+}
+
+.welcome ul {
+    display: flex;
+    padding: 0;
+    margin-left: 53.5%;
+    margin-top: 3%;
+    
+
+}
+
+.welcome li {
+    list-style: none;
+}
+
+
+@media screen and (max-width: 768px) {
+   
+    .login{
+        margin-left: -270px;
+        margin-right: 10px;
+    }
+
+    .register{
+        margin-left: -20px;
+    }
+
+}

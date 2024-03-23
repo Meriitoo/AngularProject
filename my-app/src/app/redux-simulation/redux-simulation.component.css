@@ -1,0 +1,71 @@
+.buton-theme-details{
+    margin-left: 2%;
+    border-radius: 15px; 
+    padding: 5px 20px;
+
+}
+
+label{
+    margin-right: 1%;
+}
+
+input{
+    margin-right: 1%;
+}
+
+h1{
+    text-align: center;
+    color: #d323a2;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+
+.game{
+    margin-bottom: 20%;
+    font-size: 30px;
+    margin-left: 2%;
+}
+
+.winning{
+    font-size: 25px;
+    margin-left: 2%;
+    margin-bottom: 35%;
+    margin-top: -10%;
+}
+
+
+.emoji {
+    font-size: calc(100px + 4vw);
+    min-width: 1.4em;
+    margin: 0.3em 0.4em;
+    text-align: center;
+}
+
+.emoji::after {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.camera::after {
+    content: '📷';
+    --emoji: '📸';
+    animation-name: twoFrames;
+    animation-duration: 1.2s;
+}
+
+
+@keyframes twoFrames {
+    50% {
+        content: var(--emoji);
+    }
+}
+
+@keyframes threeFrames {
+    33.333% {
+        content: var(--emoji-1);
+    }
+
+    66.666% {
+        content: var(--emoji-2);
+    }
+}

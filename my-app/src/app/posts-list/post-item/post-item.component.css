@@ -1,0 +1,39 @@
+h3 {
+    border-bottom: none;
+    border-radius: 0.3rem;
+    font-size: 1.2rem;
+    background-color: pink;
+    padding-left: 0.5rem;
+    text-align: center;
+}
+
+p {
+    text-align: center;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.buton-theme-details {
+    display: block; 
+    margin: 0 auto; 
+    border-radius: 15px; 
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+@media screen and (max-width: 768px) {
+    .buton-theme-details {
+        width: 80% !important;
+        font-size: 10px;
+    }
+
+    h3{
+        font-size: 14px;
+    }
+}
+
+
+

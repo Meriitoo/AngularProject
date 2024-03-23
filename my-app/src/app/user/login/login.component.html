@@ -1,0 +1,54 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="login()" class="login">
+
+        <div class="form signup">
+            <h2>Sign in</h2>
+
+            <!-- email -->
+            <p class="field field-icon" class="inputBox">
+                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <input type="email" name="email" id="email" placeholder="meri.ismail@gmail.com" formControlName="email" />
+                <span>email address</span>
+            </p>
+
+            <ng-container *ngIf="form.get('email')?.touched">
+                <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                    Email is required!
+                </p>
+                <p class="error" *ngIf="form.get('email')?.errors?.['appEmailValidator']">
+                    Email is not valid!
+                </p>
+            </ng-container>
+
+
+                <!-- password -->
+                <p class="field field-icon" class="inputBox">
+                    <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                    <input type="password" name="password" id="password" placeholder="******"
+                        formControlName="password" />
+                    <span>password</span>
+                </p>
+
+                <ng-container *ngIf="form.get('password')?.touched">
+                    <p class="error" *ngIf="form.get('password')?.errors?.['required']">
+                        Password is required!
+                    </p>
+                    <p class="error" *ngIf="form.get('password')?.errors?.['minlength']">
+                        Password must be at least
+                        {{form.get('password')?.errors?.['minlength']?.['requiredLength']}}
+                        characters!
+                    </p>
+                </ng-container>
+
+            <div class="inputBox">
+                <input type="submit" value="Log In">
+            </div>
+
+            <p class="text-center" style="font-size: 22px">
+                Don't have an account?
+                <a routerLink="/auth/register">Register</a>
+            </p>
+
+        </div>
+    </form>
+</div>  

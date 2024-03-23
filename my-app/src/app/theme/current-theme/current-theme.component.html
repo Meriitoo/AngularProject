@@ -1,0 +1,51 @@
+<div class="container" *ngIf="theme">
+    <!-- theme content  -->
+    <div class="theme-content">
+        <!-- theme-title  -->
+        <div class="theme-title">
+            <div class="theme-name-wrapper">
+                <div class="theme-name">
+                    <p>Date: <time>{{theme.created_at}}</time></p>
+                    <h2 class="caption-title">Caption title: {{theme.themeName}}</h2>
+                    <h3>Caption content: {{theme.area}}</h3>
+                    <p style="font-size: 18px"><i class="fa fa-thumbs-up" style="font-size:24px; color: purple;"></i><span> {{theme.subscribers.length}}</span> People liked this caption
+                        content. </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- comment  -->
+        <div class="comment" *ngFor="let post of theme.posts">
+
+            <div class="be-img-comment">
+
+                <img src="https://bootdey.com/img/Content/avatar/avatar3.png" alt="user-profile" class="be-ava-comment">
+
+            </div>
+            <div class="be-comment-content">
+                <span class="be-comment-name">
+                    {{post.userId.username}}
+                </span>
+                <span class="be-comment-time">
+                    <i class="fa fa-clock-o"></i>
+                    {{post.created_at}}
+                </span>
+                <p class="be-comment-text">
+                    {{post.text}}
+                </p>
+            </div>
+        </div>
+        <div class="answer-comment" *ngIf="isLogged">
+            <h2><span></span>Add your caption:</h2>
+            <div class="col-xs-12">
+                <form (ngSubmit)="postComment()" #commentForm="ngForm" class="form-group">
+                    <textarea name="postText" id="comment" cols="30" rows="10" [(ngModel)]="commentText" required
+                        class="form-input" placeholder="Your caption"></textarea>
+                    <button type="submit" class="buton-theme-details">Post</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div> 

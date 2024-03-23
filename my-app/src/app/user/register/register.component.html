@@ -1,0 +1,110 @@
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="register()" class="register">
+
+        <div class="form signup">
+            <h2>Sign up</h2>
+
+            <!-- username -->
+            <p class="field field-icon" class="inputBox">
+                <label for="username"><span><i class="fas fa-user"></i></span></label>
+                <input class="input-error" type="text" name="username" id="username" placeholder="Meri"
+                    formControlName="username" />
+                <span>name</span>
+            </p>
+
+            <ng-container *ngIf="form.get('username')?.touched">
+                <p class="error" *ngIf="form.get('username')?.errors?.['required']">
+                    Username is required!
+                </p>
+                <p class="error" *ngIf="form.get('username')?.errors?.['minlength']">
+                    Username's length should not be less than 5!
+                </p>
+            </ng-container>
+
+
+            <!-- email -->
+            <p class="field field-icon" class="inputBox">
+                <label for="email"><span><i class="fas fa-envelope"></i></span></label>
+                <input type="email" name="email" id="email" placeholder="meri.ismail@gmail.com" formControlName="email" />
+                <span>email address</span>
+            </p>
+
+            <ng-container *ngIf="form.get('email')?.touched">
+                <p class="error" *ngIf="form.get('email')?.errors?.['required']">
+                    Email is required!
+                </p>
+                <p class="error" *ngIf="form.get('email')?.errors?.['appEmailValidator']">
+                    Email is not valid!
+                </p>
+            </ng-container>
+
+
+
+            <!-- telephone -->
+            <p class="field field-icon" class="inputBox">
+                <label for="tel"><span><i class="fas fa-phone"></i></span></label>
+                <input type="text" name="tel" id="tel" placeholder="885 888 888" formControlName="tel" />
+                <span>telephone</span>
+            </p>
+
+            <ng-container formGroupName="passGroup">
+                <!-- password -->
+                <p class="field field-icon" class="inputBox">
+                    <label for="password"><span><i class="fas fa-lock"></i></span></label>
+                    <input type="password" name="password" id="password" placeholder="******"
+                        formControlName="password" />
+                    <span>password</span>
+                </p>
+
+                <ng-container *ngIf="form.get('passGroup')?.get('password')?.touched">
+                    <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['required']">
+                        Password is required!
+                    </p>
+                    <p class="error" *ngIf="form.get('passGroup')?.get('password')?.errors?.['minlength']">
+                        Password must be at least
+                        {{form.get('passGroup')?.get('password')?.errors?.['minlength']?.['requiredLength']}}
+                        characters!
+                    </p>
+                </ng-container>
+
+
+                <!-- rePassword -->
+                <p class="field field-icon" class="inputBox">
+                    <label for="rePassword"><span><i class="fas fa-lock"></i></span></label>
+                    <input type="password" name="rePassword" id="rePassword" placeholder="******"
+                        formControlName="rePassword" />
+                    <span>repeat password</span>
+                </p>
+
+                <ng-container *ngIf="form.get('passGroup')?.get('rePassword')?.touched">
+                    <p class="error" *ngIf="
+                form.get('passGroup')?.errors?.['matchPasswordsValidator'] || 
+                form.get('passGroup')?.get('rePassword')?.errors?.['required']">
+
+                        Repeat Password does not match password!
+
+                    </p>
+                </ng-container>
+
+
+            </ng-container>
+
+            <!-- <button [disabled]="form.invalid">Create Account</button> -->
+
+            <div class="inputBox">
+                <input type="submit" value="Register">
+            </div>
+
+            <!-- <div>
+                {{form.value | json}}
+            </div>
+         -->
+
+            <p class="text-center-size" style="font-size: 22px">
+                Have an account?
+                <a routerLink="/auth/login">Log In</a>
+            </p>
+
+        </div>
+    </form>
+</div>

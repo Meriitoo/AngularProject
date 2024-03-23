@@ -1,0 +1,78 @@
+<div class="container">
+
+    <i class="fas fa-envelope"></i>
+    <i class="fas fa-at"></i>
+    <i class="fas fa-mail-bulk"></i>
+    
+    <div class="new-theme-border">
+
+        <form #form="ngForm" (ngSubmit)="newThemeSubmitHandler(form)">
+
+            <h1>Add Caption</h1>
+
+            <div class="new-theme-title">
+                <label for="area">Caption content: <span class="red">*</span></label>
+                <input type="text" name="area" id="area" ngModel #inputName="ngModel" required minlength="10"
+                    placeholder="Enter content.. like Sea" />
+
+                <ng-container *ngIf="inputName.touched">
+                    <p class="error" *ngIf="inputName.errors?.['required']">
+                        Caption content is required.
+                    </p>
+                    <p class="error" *ngIf="inputName.errors?.['minlength']">
+                        Caption content must be at least 10 characters long.
+                    </p>
+                </ng-container>
+
+            </div>
+
+
+
+            <div class="new-theme-title">
+                <label for="themeName">Title <span class="red">*</span></label>
+                <input type="text" name="themeName" id="themeName" ngModel #inputName="ngModel" required minlength="5"
+                    placeholder="Enter title.. like Summer" />
+
+                <ng-container *ngIf="inputName.touched">
+                    <p class="error" *ngIf="inputName.errors?.['required']">
+                        Title is required.
+                    </p>
+                    <p class="error" *ngIf="inputName.errors?.['minlength']">
+                        Title must be at least 5 characters long.
+                    </p>
+                </ng-container>
+
+            </div>
+
+            <div class="new-theme-content">
+                <label for="postText">Post <span class="red">*</span></label>
+                <textarea type="text" name="postText" id="postText" rows="8" class="height" ngModel
+                    #textAreaInput="ngModel" required minlength="10"
+                    placeholder="Enter caption about sea.. for example Life's a beach, and I'm just playing in the sand."></textarea>
+
+                <ng-container *ngIf="textAreaInput.touched">
+                    <p class="error" *ngIf="textAreaInput.errors?.['required']">
+                        The field with your post is required.
+                    </p>
+                    <p class="error" *ngIf="textAreaInput.errors?.['minlength']">
+                        Post must be at least 10 characters long.
+                    </p>
+                </ng-container>
+
+            </div>
+
+
+                <button type="submit" class="buton-theme-details" [disabled]="form.invalid" >Post</button>
+                <button class="cancel" (click)="cancel()" class="buton-theme-details">Cancel</button>
+           
+           
+
+        </form>
+    </div>
+
+    <i class="fas fa-envelope"></i>
+    <i class="fas fa-at"></i>
+    <i class="fas fa-mail-bulk"></i>
+</div>
+
+

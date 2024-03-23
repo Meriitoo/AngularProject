@@ -1,0 +1,7 @@
+
+<div *ngIf="post" class="posts-details">
+    <p><span>This is recent caption: {{ post.text }}</span></p>
+    <p>Caption owner: {{ post.userId?.username }}</p>
+    <p><span>Posted: {{ post.created_at | elapsedTime }}</span></p>
+    
+</div>
