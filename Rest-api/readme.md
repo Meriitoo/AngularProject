@@ -60,7 +60,7 @@ Required:
 
 ```username``` : [string] -- The email of the person is required and must be unique;
 
-```email``` : [string] -- The email of the person is required and must include @gmail.com to be valid and also there is a minimum length of 5 chars, allowed are latin letters and numbers; ;
+```email``` : [string] -- The email of the person is required and must include @gmail.com to be valid and also there is a minimum length of 5 chars, allowed are latin letters and numbers; 
 
 ```password``` : [string] -- The password of the person is required and must be unique, also there is a minimum length of 5 chars, allowed are latin letters and numbers;
 
