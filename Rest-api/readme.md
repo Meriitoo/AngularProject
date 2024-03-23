@@ -361,7 +361,7 @@ Content:
 .get location/getAll - lists all created locations only for registered users
 .post location/create - add new location only for registered users
 .patch location/update/:id - edit the location only for registered users
-.delete location/remoce/:id - delete the location only for registered users
+.delete location/remove/:id - delete the location only for registered users
 
 --> winners:
 .post winners/crate - add the winner, no registration needed
