@@ -48,11 +48,11 @@ Signs up user and returns the registered data as json.
 
 ```
 {
-    "username":"Mimito"
-    "email":"mimito@gmail.com",
-    "telephone":"0892314578",
-    "password":"123456",
-    "rePassword":"123456"
+    "username": "Merito"
+    "email": "merito@gmail.com",
+    "telephone": "0892314578",
+    "password": "123456",
+    "rePassword": "123456"
 }
 ```
 
